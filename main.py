@@ -3,12 +3,8 @@ sys.path.append("..") # Adds higher directory to python modules path.
 import time, WriteDB, GetGTFS, GetGTFSRT, db, process, shutil, export, aggregate_GTFS
 from datetime import timedelta, date, datetime
 
-# start and end time to pull data
-#start_date = date(2018, 5, 18)
-#end_date = date(2018, 6, 12)
-
-start = date(2018, 6, 16)
-end = date(2018, 6, 18)
+start = datetime.strptime(sys.argv[1], '%m/%d/%Y').date()
+end = datetime.strptime(sys.argv[2], '%m/%d/%Y').date()
 
 def main(start_date, end_date, aggregate_method):    
     global routes, trips, stop_times, stops

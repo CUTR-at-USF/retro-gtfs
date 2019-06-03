@@ -46,7 +46,9 @@ Change the file name of [sample conf.py](./sample conf.py) into `conf.py`, then 
 
 ### Run
 
-`python main.py`
+`python main.py "<from date>" "<to date>"` where dates have format "mm/dd/yyyy"
+
+For example, `python main.py "05/16/2018" "06/16/2018"`
 
 Output: `./output/individuals` would contain daily retro-GTFS files, `./output/aggregated` would contain aggregated retro-GTFS bundle.
 
